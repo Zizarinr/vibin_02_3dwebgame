@@ -1,53 +1,53 @@
 # Nature Exploration - 3D Web Game Prototype
 
-Selamat datang di proyek **Nature Exploration**! 🌲✨
+Welcome to the **Nature Exploration** project! 🌲✨
 
-Proyek ini adalah eksperimen dan percobaan pertama saya dalam mempelajari **Three.js** untuk membuat dunia 3D interaktif di dalam web browser. Proyek ini dibangun secara interaktif menggunakan pendekatan *"vibe coding"* bersama **Antigravity by Google** (AI Coding Assistant).
+This project is my first experiment and trial in learning **Three.js** to create interactive 3D worlds in the web browser. It was built interactively using the *"vibe coding"* approach alongside **Antigravity by Google** (AI Coding Assistant).
 
-## 🎮 Tentang Proyek Ini
+## 🎮 About The Project
 
-Ini adalah *Minimum Viable Product* (MVP) untuk sebuah game web eksplorasi alam 3D. Proyek ini mengusung gaya visual **Comic / Toon Shading (Cel-shaded)** yang memberikan kesan seperti masuk ke dalam buku komik atau animasi kartun, alih-alih mencoba tampil serealistis mungkin.
+This is a Minimum Viable Product (MVP) for a 3D nature exploration web game. The project embraces a **Comic / Toon Shading (Cel-shaded)** visual style, aiming to feel like stepping into a comic book or a cartoon animation, rather than attempting to be hyper-realistic.
 
-### Fitur Utama Saat Ini:
-- **Kamera First-Person (FPS):** Kamu bisa melihat dunia dari sudut pandang karakter menggunakan kontrol pergerakan klasik (W, A, S, D atau Panah) dan mengarahkan pandangan menggunakan *mouse* (menggunakan fitur `PointerLockAPI`).
-- **Gaya Visual Kartun (Toon Shading):** Memanfaatkan `MeshToonMaterial` bawaan Three.js yang dipadukan dengan *custom gradient map* (pencahayaan berundak) serta *outline* hitam dasar (dengan teknik *Inverted Hull*) agar objek terlihat seperti digambar dengan tinta.
-- **Dunia Prosedural Sederhana:** Daripada memuat model 3D yang berat di awal, proyek ini merender daratan (*terrain*) yang bergelombang dan ratusan pohon menggunakan `InstancedMesh` (demi performa yang sangat ringan) melalui rumus matematika langsung di dalam kode.
-- **Sistem Fisika/Deteksi Dasar:** Kamera pemain secara otomatis bisa mendeteksi kontur naik-turunnya bukit daratan sehingga memberikan sensasi berjalan di atas tanah sungguhan.
+### Current Core Features:
+- **First-Person Camera (FPS):** Experience the world from the character's perspective using classic movement controls (W, A, S, D or Arrows) and mouse-look (utilizing the `PointerLockAPI`).
+- **Cartoon Visual Style (Toon Shading):** Leverages Three.js's built-in `MeshToonMaterial` combined with a custom gradient map (stepped lighting) and basic black outlines (via the *Inverted Hull* technique) to make objects look hand-inked.
+- **Simple Procedural World:** Instead of loading heavy 3D models upfront, this project renders an undulating terrain and hundreds of trees using `InstancedMesh` (for ultra-lightweight performance) via mathematical formulas directly in the code.
+- **Basic Physics/Collision System:** The player's camera automatically detects and adjusts to the contours of the rolling hills, providing the sensation of walking on solid ground.
 
-## 🛠️ Teknologi yang Digunakan
-- **HTML, CSS, dan JavaScript (Vanilla)**
-- **[Three.js](https://threejs.org/):** Library 3D utama yang berjalan di atas WebGL.
-- **[Vite](https://vitejs.dev/):** *Build tool* dan *dev server* yang modern dan super cepat.
-- **Antigravity by Google:** AI Assistant yang menjadi teman *pair-programming* untuk merancang arsitektur, *troubleshooting*, dan melakukan proses *vibe coding*.
+## 🛠️ Technologies Used
+- **HTML, CSS, and JavaScript (Vanilla)**
+- **[Three.js](https://threejs.org/):** The primary 3D library running on top of WebGL.
+- **[Vite](https://vitejs.dev/):** A modern, lightning-fast build tool and development server.
+- **Antigravity by Google:** The AI Assistant acting as a pair-programming partner for architectural design, troubleshooting, and vibe coding.
 
-## 🚀 Cara Menjalankan Secara Lokal
+## 🚀 How to Run Locally
 
-Pastikan kamu sudah menginstal [Node.js](https://nodejs.org/) di komputermu.
+Ensure you have [Node.js](https://nodejs.org/) installed on your computer.
 
-1. Buka terminal di dalam folder proyek ini.
-2. Instal semua *dependencies*:
+1. Open a terminal in this project folder.
+2. Install all dependencies:
    ```bash
    npm install
    ```
-3. Jalankan server pengembangan (*dev server*):
+3. Start the development server:
    ```bash
    npm run dev
    ```
-4. Buka browser dan akses tautan yang tertera di terminal (biasanya `http://localhost:5173/`).
+4. Open your browser and navigate to the link provided in the terminal (usually `http://localhost:5173/`).
 
-## 💡 Apa yang Bisa Dikembangkan Selanjutnya?
+## 💡 What Can Be Developed Next?
 
-Karena proyek ini baru berupa "kanvas kosong" atau kerangka dasar, ada ruang tak terbatas untuk mengembangkannya. Berikut adalah beberapa ide yang bisa ditambahkan ke depannya:
+Since this project is essentially a "blank canvas" or foundational framework, there is unlimited room for expansion. Here are some ideas for future development:
 
-1. **Menggunakan Aset 3D Kustom:** Mengganti bentuk dasar bawaan Three.js (tabung dan kerucut) dengan aset 3D betulan (format `.glb` atau `.gltf`) buatan sendiri menggunakan aplikasi seperti Blender (contoh: pohon beringin kartun, bebatuan, atau rumah kayu).
-2. **Karakter & Kamera Third-Person:** Menambahkan model 3D untuk karakter utama yang dianimasikan, lalu memindahkan kamera agar mengikuti karakter dari belakang (*Third-Person*).
-3. **Meningkatkan Suasana Lingkungan:**
-   - Menambahkan *Skybox* (langit berupa kubus raksasa) bergaya lukisan dengan matahari dan awan.
-   - Menambahkan efek daun-daun yang bergoyang tertiup angin menggunakan *custom vertex shaders*.
-   - Menambahkan efek partikel kunang-kunang di malam hari.
-4. **Menambahkan Gameplay Utama:** Memasukkan objek yang bisa berinteraksi, sistem skor (mengumpulkan koin/benda tersembunyi), atau papan petunjuk jalan yang bisa dibaca.
-5. **Audio dan Sound Effect:** Memberikan *ambient sound* (suara jangkrik, burung hutan) dan efek suara langkah kaki di atas rumput.
-6. **Penyempurnaan Post-Processing:** Mengganti *outline* sederhana dengan efek `OutlinePass` dari fitur *Post-processing* Three.js agar garis komiknya terlihat sempurna dan konsisten untuk semua bentuk objek 3D.
+1. **Custom 3D Assets:** Replace the built-in Three.js primitives (cylinders and cones) with actual custom 3D models (`.glb` or `.gltf` formats) made in software like Blender (e.g., stylized pine trees, rocks, or a wooden cabin).
+2. **Third-Person Camera & Character:** Add a rigged 3D character model with animations, and shift the camera to follow behind the character (Third-Person).
+3. **Environment Enhancements:**
+   - Add a painted Skybox with a sun and clouds.
+   - Add wind effects to make the leaves sway using custom vertex shaders.
+   - Implement firefly particle effects for nighttime scenes.
+4. **Core Gameplay Mechanics:** Introduce interactable objects, a scoring system (collecting coins/hidden items), or readable signposts.
+5. **Audio and Sound Effects:** Bring the world to life with ambient nature sounds (crickets, birds) and footsteps on the grass.
+6. **Advanced Post-Processing:** Replace the simple outline method with the `OutlinePass` from Three.js Post-processing for perfect, consistent comic book lines across all complex 3D shapes.
 
 ---
-*Dibuat untuk belajar, bereksperimen, dan bersenang-senang di dunia WebGL.*
+*Built to learn, experiment, and have fun in the world of WebGL.*
